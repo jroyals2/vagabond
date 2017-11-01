@@ -2,6 +2,15 @@ import React from 'react';
 import styled from 'styled-components'
 
 const Home = styled.div`
+color: silver;
+
+`
+const List = styled.ul`
+display: flex;
+flex-directtion: row;
+justify-content: space-around;
+font-size: 30px;
+padding: 75gipx; 
 
 `
 
@@ -11,16 +20,17 @@ const componentName = () => {
     return (
         <div>
             <Home>
-             <h1> Title </h1>
+             <h1> Globe Trotters </h1>
 
             <img className="homepicture" src="https://www.homeadvisor.com/images/consumer/hhi/hero-photos/city/Atlanta.jpg" alt="atlanta"/>
-            <ul>
+            <List>
+        
                 <li>Atlanta</li>
                 <li>New York </li>
                 <li>Boston</li>
                 <li>London</li>
                 <li>San Diego</li>
-                </ul>
+            </List>
                 </Home>
         </div>
     );

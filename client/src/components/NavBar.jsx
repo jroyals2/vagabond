@@ -13,10 +13,16 @@ background-color: rgba(25, 100, 130, .25);
 box-shadow: inset 0 0 1em black, 0 0 1em white;
 height: 100px;
 
+
 a {
   text-decoration: none;
-  color: blue;
+  color: silver;
 }
+
+a:hover {
+color: red;
+}
+
 `
 class NavBar extends Component {
     render() {
