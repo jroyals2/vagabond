@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components'
+import CityList from './CityList'
 
 const Home = styled.div`
 color: silver;
@@ -18,7 +19,7 @@ padding: 75gipx;
 
 
 
-const componentName = () => {
+const componentName = (props) => {
     return (
         <div>
             <Home>
@@ -26,7 +27,7 @@ const componentName = () => {
 
             <img className="homepicture" src="https://www.homeadvisor.com/images/consumer/hhi/hero-photos/city/Atlanta.jpg" alt="atlanta"/>
             <List>
-        
+                <CityList cities={props.cities}/>
                 <li>Atlanta</li>
                 <li>New York </li>
                 <li>Boston</li>
