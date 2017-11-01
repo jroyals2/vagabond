@@ -5,6 +5,7 @@ import HomePage from './components/HomePage'
 import NavBar from './components/NavBar'
 import styled from 'styled-components'
 import axios from 'axios'
+import City from './components/City'
 
 
 
@@ -13,7 +14,6 @@ import axios from 'axios'
 class App extends Component {
   state = {
     cities:[],
-    posts:[]
     }
 
   async componentWillMount() {
@@ -35,6 +35,7 @@ class App extends Component {
         <NavBar/> 
         <Switch>
         <Route exact path='/' render={(props) => (<HomePage cities={this.state.cities}/>)}/>
+        <Route exact path='/cities/:cityId' component={City}/>
         </Switch>
         </div>
        
