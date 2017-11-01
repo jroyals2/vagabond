@@ -6,11 +6,13 @@ color: silver;
 
 `
 const List = styled.ul`
+@media(min-width: 1366px){
 display: flex;
 flex-directtion: row;
 justify-content: space-around;
 font-size: 30px;
 padding: 75gipx; 
+}
 
 `
 
