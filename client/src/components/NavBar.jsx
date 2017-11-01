@@ -7,6 +7,9 @@ class NavBar extends Component {
             <div>
               
             <Link to ="/"> Home Page </Link>
+            <Link to ="/"> Sign Up </Link>
+            <Link to ="/"> Login In  </Link>
+            
 
 
             </div>
