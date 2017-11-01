@@ -4,11 +4,14 @@ import styled from 'styled-components'
 
 const Nav = styled.div`
 display: flex;
-justify-content: space-between;
+justify-content: space-around;
+align-items: center;
 font-size: 20px;
 color: blue;
 text-align: center;
 background-color: rgba(25, 100, 130, .25);
+box-shadow: inset 0 0 1em black, 0 0 1em white;
+height: 100px;
 
 a {
   text-decoration: none;
