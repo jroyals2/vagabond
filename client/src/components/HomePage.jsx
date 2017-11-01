@@ -22,7 +22,7 @@ const componentName = () => {
     return (
         <div>
             <Home>
-             <h1> Globe Trotters </h1>
+             <h1> Globe Trotter </h1>
 
             <img className="homepicture" src="https://www.homeadvisor.com/images/consumer/hhi/hero-photos/city/Atlanta.jpg" alt="atlanta"/>
             <List>
