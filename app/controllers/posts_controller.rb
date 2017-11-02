@@ -17,7 +17,8 @@ class PostsController < ApplicationController
         
         @city.posts << @post
         @city.save! 
-        render status: :ok
+        @posts = @city.posts.order(created_at: :desc)
+        render json: @posts
     end 
 
     def update

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import PostList from './PostList'
+import NewPostForm from  './NewPostForm'
 
 class City extends Component {
     state = {
@@ -23,6 +24,25 @@ class City extends Component {
             console.log(error)
           } 
       } 
+
+      createNewPost = async (newPost) => {
+        const cityId = this.props.match.params.cityId
+        const response = await axios.post(`/cities/${cityId}/posts`, {
+            "post": newPost
+
+        })
+        console.log(response.data)
+        this.setState({posts: response.data})
+      }
+      
+
+
+    //   createNewPost = async(postId) => {
+    //       const cityId = this.props.match.params.cityId
+    //       const id = postId 
+    //       const clonedCity = {...this.state.city}
+    //       cons 
+    //   }
     render() {
         return (
             <div>
@@ -33,6 +53,10 @@ class City extends Component {
                 cityId={this.props.match.params.cityId} 
                 posts={this.state.posts}
                 />
+                <NewPostForm
+                createNewPost={this.createNewPost}
+                />
+
             </div>
         );
     }
