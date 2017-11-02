@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import PostList from './PostList'
 import NewPostForm from './NewPostForm'
+import EditPost from './EditPost'
 
 class City extends Component {
     state = {
@@ -66,7 +67,7 @@ class City extends Component {
                 <NewPostForm
                     createNewPost={this.createNewPost}
                 />
-
+                
             </div>
         );
     }
