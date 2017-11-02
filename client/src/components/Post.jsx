@@ -20,25 +20,34 @@ class Post extends Component {
     } 
   }
   handleChange = (event) => {
-    const attribute = event.target.name
-    const editPost = {...this.state.post}
-    editPost[attribute] = event.target.value
-    console.log("this fucking works horeeee")
-    this.setState({post: editPost})
-}
+      const attribute = event.target.name
+      const editPost = { ...this.state.post }
+      editPost[attribute] = event.target.value
+      console.log("this fucking works horeeee")
+      this.setState({ post: editPost })
+  }
 
-onSubmit = (event) => {
-    
-    this.setState({editMode : false})
-}
+  updatePost = async (event) => {
+      event.preventDefault()
+      const {cityId, postId} = this.props.match.params
+      const clonedPost = { ...this.state.post }
+      console.log(clonedPost)
+      const response = await axios.patch(`/cities/${cityId}/posts/${postId}`, {
+          post: clonedPost
+      })
+      
+      this.setState({ post: response.data })
+      this.setState({ editMode: false })
+  }
     render() {
         if(this.state.editMode){
             return (
                 <div className="container">
                     <br/>
                     <div className="jumbotron">
-                        <form onSubmit={this.onSubmit}>
+                        <form onSubmit={this.updatePost}>
                         Title: <input type="text" value={this.state.post.title} onChange={this.handleChange} name="title" />
+                        <br/>
                         <textarea onChange={this.handleChange} name="content"value={this.state.post.content} rows="10" cols="50"></textarea>
                         <br/>
                         <input type="submit"/><br/><br/>

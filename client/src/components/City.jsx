@@ -46,17 +46,6 @@ class City extends Component {
 
     }
 
-
-    //   updatePost = async (postId) => {
-    //       const cityId = this.props.match.params.cityId
-    //       const id = postId
-    //       const clonedCity = { ...this.state.city }
-    //       const post = clonedCity.post.find(i => i._id === postId)
-    //       const response = await axios.patch(`/cities/${cityId}/posts/${id}`{
-    //           post: post
-    //       })
-    //       this.setState({ posts: response.data })
-    //   }
     render() {
         return (
             <div>
