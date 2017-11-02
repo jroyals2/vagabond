@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 const PostList = (props) => {
     return (
@@ -6,8 +7,8 @@ const PostList = (props) => {
             {props.posts.map((post) => {
                 return(
                     <div>
-                        <h1>{post.title}</h1>
-                        <p>{post.content}</p>
+                        <Link to={`/cities/${props.cityId}/posts/${post.id}`}>{post.title}</Link>
+                        
 
 
                     </div>

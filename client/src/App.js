@@ -6,6 +6,7 @@ import NavBar from './components/NavBar'
 import styled from 'styled-components'
 import axios from 'axios'
 import City from './components/City'
+import Post from './components/Post'
 
 
 
@@ -36,6 +37,7 @@ class App extends Component {
         <Switch>
         <Route exact path='/' render={(props) => (<HomePage cities={this.state.cities}/>)}/>
         <Route exact path='/cities/:cityId' component={City}/>
+        <Route exact path='/cities/:cityId/posts/:postId' component={Post} />
         </Switch>
         </div>
        

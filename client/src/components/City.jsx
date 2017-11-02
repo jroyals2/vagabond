@@ -30,6 +30,7 @@ class City extends Component {
                 <h3>In the Baller state of {this.state.city.location}</h3>
                 <img src={this.state.city.picture} alt=""/>
                 <PostList 
+                cityId={this.props.match.params.cityId} 
                 posts={this.state.posts}
                 />
             </div>
