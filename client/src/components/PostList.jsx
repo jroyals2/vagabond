@@ -8,6 +8,8 @@ const PostList = (props) => {
                 return(
                     <div>
                         <Link to={`/cities/${props.cityId}/posts/${post.id}`}>{post.title}</Link>
+                        <button>Edit</button>
+                        <button>Delete</button>
                         
 
 
