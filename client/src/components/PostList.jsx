@@ -9,10 +9,8 @@ const PostList = (props) => {
                     <div>
                         <Link to={`/cities/${props.cityId}/posts/${post.id}`}>{post.title}</Link>
                         <button>Edit</button>
-                        <button>Delete</button>
-                        
-
-
+                        <button onClick={() =>  props.deletePost(post.id, props.cityId)}>Delete</button>
+    
                     </div>
                     
                 )

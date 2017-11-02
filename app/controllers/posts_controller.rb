@@ -29,8 +29,10 @@ class PostsController < ApplicationController
 
    def destroy
     @post = Post.find(params[:id])
-    @post.destroy 
-   end 
+    @post.destroy
+    @posts = City.find(params[:city_id]).posts.order(created_at: :desc)
+    render json: @posts
+end 
 
     private
     def post_params
