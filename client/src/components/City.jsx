@@ -6,6 +6,7 @@ import EditPost from './EditPost'
 import styled from 'styled-components'
 
 const Picture = styled.div`
+
 `
 
 class City extends Component {
