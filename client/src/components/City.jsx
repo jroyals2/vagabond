@@ -3,6 +3,10 @@ import axios from 'axios'
 import PostList from './PostList'
 import NewPostForm from './NewPostForm'
 import EditPost from './EditPost'
+import styled from 'styled-components'
+
+const Picture = styled.div`
+`
 
 class City extends Component {
     state = {
@@ -56,6 +60,8 @@ class City extends Component {
     render() {
         return (
             <div>
+                
+                <Picture>
                 <h1>{this.state.city.name}</h1>
                 <h3>In the Baller state of {this.state.city.location}</h3>
                 <img src={this.state.city.picture} alt="" />
@@ -67,7 +73,7 @@ class City extends Component {
                 <NewPostForm
                     createNewPost={this.createNewPost}
                 />
-                
+                </Picture>
             </div>
         );
     }

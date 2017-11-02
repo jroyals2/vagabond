@@ -2,53 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 import ConfirmLink from 'react-confirm-dialog';
 
-/*
- //   
- let areYouSure = confirm("Are you sure you want to delete?")
- if(areYouSure){
-     props.deletePost(postId, cityId)
- } else {
-     alert("Undetstandable have a nice day.")
- }
 
- <button class="btn btn-default" id="btn-confirm">Confirm</button>
-
-<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="mi-modal">
-  <div class="modal-dialog modal-sm">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Confirmar</h4>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" id="modal-btn-si">Si</button>
-        <button type="button" class="btn btn-primary" id="modal-btn-no">No</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="alert" role="alert" id="result"></div>
-
- alertSum(args) { 
-   alert(args.a + args.b); 
- }
- render() {
-   return (
-     <ConfirmLink action={this.alertSum} actionArgs={{a:1, b:2}}>
-       <a href="#">Click me to trigger the confirm popup</a>
-     </ConfirmLink>
-   );
- }
-
- props.deletePost(postId, cityId)
-
- () => askToDelete(post.id, props.cityId)
-
-
-
-*/
-
+// This is the npm package that we brought in 
+//https://www.npmjs.com/package/react-confirm-dialog
+// This handles the confirm delete action
 
 const PostList = (props) => {
     return (

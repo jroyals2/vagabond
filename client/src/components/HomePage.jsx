@@ -3,7 +3,8 @@ import styled from 'styled-components'
 import CityList from './CityList'
 
 const Home = styled.div`
-color: silver;
+text-color: blue;
+
 
 `
 const List = styled.ul`
