@@ -78,8 +78,7 @@ class City extends Component {
                
                 <div>
                 {this.state.showNewForm ?  <NewPostForm createNewPost={this.createNewPost}/>: <ToggleButton onClick={this.toggleForm}>Don't see your post???</ToggleButton>}
-                </div>
-                <div>
+               
                 {this.state.showNewForm ? <ToggleButton onClick={this.toggleForm}>Close the form</ToggleButton> : ''}
                 </div>
                 </Wrapper>

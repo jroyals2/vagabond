@@ -27,9 +27,10 @@ const CityList = (props) => {
         <List>
             {props.cities.map((city) => {
                 return (
-                
+                    <div className="card">
                     <li><Link to={`/cities/${city.id}`}>{city.name}</Link></li>
-                    
+                    <img src={city.picture} alt=""/>
+                    </div>
                 )
             })}
         </List>

@@ -9,7 +9,7 @@ const Testing = styled.input`
 background-color: black;
 border: none;
 padding: 2px;
-
+margin: 10px;
 `
 
 class NewPostForm extends Component {
