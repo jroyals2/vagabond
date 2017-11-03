@@ -44,6 +44,7 @@ class Post extends Component {
         if(this.state.editMode){
             return (
                 <div className="container">
+               
                     <br/>
                     <div className="jumbotron">
                         <form onSubmit={this.updatePost}>

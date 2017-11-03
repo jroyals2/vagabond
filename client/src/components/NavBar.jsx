@@ -28,12 +28,11 @@ class NavBar extends Component {
     render() {
         return (
             <Nav>
-              
+            
             <Link to ="/"> Home Page </Link>
             <Link to ="/"> Sign Up </Link>
             <Link to ="/"> Log In  </Link>
-            
-
+           
 
             </Nav>
         );
