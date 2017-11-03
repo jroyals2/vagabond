@@ -55,7 +55,8 @@ class City extends Component {
     render() {
         return (
             <div>
-                
+                {this.state.showNewForm ?  <NewPostForm createNewPost={this.createNewPost}/>: <button onClick={this.toggleForm}>Don't see your post???</button>}
+                {this.state.showNewForm ? <button onClick={this.toggleForm}>Close the form</button> : ''}
                 <Picture>
                 <h1>{this.state.city.name}</h1>
                 <h3>In the Baller state of {this.state.city.location}</h3>
@@ -65,8 +66,7 @@ class City extends Component {
                     posts={this.state.posts}
                     deletePost={this.deletePost}
                 />
-                {this.state.showNewForm ?  <NewPostForm createNewPost={this.createNewPost}/>: <button onClick={this.toggleForm}>Don't see your post???</button>}
-                {this.state.showNewForm ? <button onClick={this.toggleForm}>Close the form</button> : ''}
+                
                 </Picture>
             </div>
         );
