@@ -12,13 +12,7 @@ const Picture = styled.div`
 `
 const PageWrapper = styled.div`
 color: white;
-@media(min-width: 1366px){
-display: flex;
-flex-directtion: row;
-justify-content: space-around;
-font-size: 30px;
-padding: 75gipx; 
-}
+
 `
 
 const Wrapper = styled.div`

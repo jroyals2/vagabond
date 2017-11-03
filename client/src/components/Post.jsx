@@ -1,9 +1,20 @@
 import axios from 'axios'
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
+import styled from 'styled-components'
 
-// t
-// this.props.match.params.postId
+
+
+const Button = styled.button`
+border-radius: 11px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 35px;
+  padding: 15px 21px 19px 12px;
+  text-decoration: none;
+
+`
+
 
 class Post extends Component {
     state = {
@@ -54,9 +65,9 @@ class Post extends Component {
                         <input type="submit"/><br/><br/>
                         </form>
                         <span><em>Created: {this.state.post.created_at} - Updated: {this.state.post.updated_at}</em></span>
-                        <div>
-                        <Link to ={`/cities/${this.props.match.params.cityId}`}> Back to the City!</Link>
-                        </div>
+                        <Button>
+                       <Link to ={`/cities/${this.props.match.params.cityId}`}> Back to the City!</Link>
+                        </Button>
                     </div>
                     <br/>
                 </div>
