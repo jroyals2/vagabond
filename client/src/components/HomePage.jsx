@@ -40,20 +40,9 @@ const componentName = (props) => {
              </Home>
 
             <img className="homepicture" src="https://www.homeadvisor.com/images/consumer/hhi/hero-photos/city/Atlanta.jpg" alt="atlanta"/>
-            <List>
-            <div className="card">
-                <CityList cities={props.cities}
-                img src="img_avatar.png" alt="Avatar"
-                />
-                
-                <li>New York </li>
-                
-                <li>Boston</li>
-                <li>London</li>
-                <li>San Diego</li>
-                </div>
-            </List>
-               
+
+            <CityList cities={props.cities}/>
+           
         </div>
     );
 };
