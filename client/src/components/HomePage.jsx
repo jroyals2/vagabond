@@ -27,15 +27,9 @@ const componentName = (props) => {
              <h1> Globe Trotter </h1>
 
             <img className="homepicture" src="https://www.homeadvisor.com/images/consumer/hhi/hero-photos/city/Atlanta.jpg" alt="atlanta"/>
-            <List>
-                <CityList cities={props.cities}/>
-                <li>Atlanta</li>
-                <li>New York </li>
-                <li>Boston</li>
-                <li>London</li>
-                <li>San Diego</li>
-            </List>
-                </Home>
+
+            <CityList cities={props.cities}/>
+            </Home>
         </div>
     );
 };
