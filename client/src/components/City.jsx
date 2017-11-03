@@ -12,7 +12,8 @@ const Picture = styled.div`
 class City extends Component {
     state = {
         city: {},
-        posts: []
+        posts: [],
+        showNewForm: false
     }
     async componentWillMount() {
         try {
@@ -29,6 +30,10 @@ class City extends Component {
         } catch (error) {
             console.log(error)
         }
+    }
+
+    toggleForm = () => {
+        this.setState({showNewForm: !this.state.showNewForm})
     }
 
     createNewPost = async (newPost) => {
@@ -60,9 +65,8 @@ class City extends Component {
                     posts={this.state.posts}
                     deletePost={this.deletePost}
                 />
-                <NewPostForm
-                    createNewPost={this.createNewPost}
-                />
+                {this.state.showNewForm ?  <NewPostForm createNewPost={this.createNewPost}/>: <button onClick={this.toggleForm}>Don't see your post???</button>}
+                {this.state.showNewForm ? <button onClick={this.toggleForm}>Close the form</button> : ''}
                 </Picture>
             </div>
         );

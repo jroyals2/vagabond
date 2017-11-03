@@ -32,14 +32,14 @@ class NewPostForm extends Component {
      render() {
         return (
             <div>
-                <form onSubmit={this.handleSubmit} >
+                <form  onSubmit={this.handleSubmit} >
                     <div>
                     <label htmlFor= "title">  Post Title</label>
                     <input onChange = {this.handleChange} value = {this.state.newPost.title} type = "text" name = "title"/>
                     </div>
                     
                     <div>
-                    <label htmlFor= "content">  Post Ass</label>
+                    <label htmlFor= "content">  Post Content</label>
                     <input onChange = {this.handleChange} value = {this.state.newPost.content} type = "text" name = "content"/>
                     </div>
                     <button type="submit">Add A Post </button>
