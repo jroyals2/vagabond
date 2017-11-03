@@ -42,5 +42,6 @@ img {
   background-color: rgba(150, 150, 150, 0.6);
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 0 1em rgb(0, 0, 0);;
   color: black;
+  font-size: 20px;
 }
 

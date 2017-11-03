@@ -79,6 +79,9 @@ return cdate
 }
 
   render() {
+    const createdDate =  new Date(this.state.post.created_at).toUTCString().substring(0, 17)
+    const updatedDate =  new Date(this.state.post.updated_at).toUTCString().substring(0, 17)
+    console.log(createdDate)
         if(this.state.editMode){
             return (
                 <div className="container">
@@ -91,7 +94,7 @@ return cdate
                         <br/>
                         <input type="submit"/><br/><br/>
                         </form>
-                        <span><em>Created: {this.formatedTime(this.state.post.created_at)} - Updated: {this.state.post.updated_at}</em></span>
+                        <span><em>Created: {createdDate} - Updated: {updatedDate}</em></span>
                         <Button>
                        <Link to ={`/cities/${this.props.match.params.cityId}`}> Back to the City!</Link>
                         </Button>
@@ -107,7 +110,7 @@ return cdate
                         <h1 className="display-3">{this.state.post.title}</h1>
                         <p className="lead">{this.state.post.content}</p>
                         <br/><InputWrapper type="button" value="Edit Post" onClick={()=>{this.setState({editMode : true})}}/><br/><br/>
-                        <span><em>Created: {this.state.post.created_at} - Updated: {this.state.post.updated_at}</em></span>
+                        <div><span><em>Created: {createdDate} - Updated: {updatedDate}</em></span></div>
                         <Button>
                         <Link to ={`/cities/${this.props.match.params.cityId}`}>Back to the City</Link>
                         </Button>
