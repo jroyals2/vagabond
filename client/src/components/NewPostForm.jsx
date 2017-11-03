@@ -1,5 +1,16 @@
 import React, { Component } from 'react';
+import styled from 'styled-components'
 
+const ToggleButton = styled.button`
+background: grey;
+`
+
+const Testing = styled.input`
+background-color: black;
+border: none;
+padding: 2px;
+
+`
 
 class NewPostForm extends Component {
 
@@ -35,14 +46,14 @@ class NewPostForm extends Component {
                 <form  onSubmit={this.handleSubmit} >
                     <div>
                     <label htmlFor= "title">  Post Title</label>
-                    <input onChange = {this.handleChange} value = {this.state.newPost.title} type = "text" name = "title"/>
+                    <Testing onChange = {this.handleChange} placeholder = "Post Title Here" value = {this.state.newPost.title} type = "text" name = "title"/>
                     </div>
                     
                     <div>
                     <label htmlFor= "content">  Post Content</label>
-                    <input onChange = {this.handleChange} value = {this.state.newPost.content} type = "text" name = "content"/>
+                    <Testing onChange = {this.handleChange} placeholder = "Content Here" value = {this.state.newPost.content} type = "text" name = "content"/>
                     </div>
-                    <button type="submit">Add A Post </button>
+                    <ToggleButton type="submit">Add A Post </ToggleButton>
                 </form>
             </div>
         );

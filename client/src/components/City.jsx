@@ -7,6 +7,28 @@ import styled from 'styled-components'
 
 const Picture = styled.div`
 
+
+
+`
+const PageWrapper = styled.div`
+color: white;
+@media(min-width: 1366px){
+display: flex;
+flex-directtion: row;
+justify-content: space-around;
+font-size: 30px;
+padding: 75gipx; 
+}
+`
+
+const Wrapper = styled.div`
+display: flex;
+justify-content: space-around;
+align-items: center;
+`
+const ToggleButton = styled.button`
+background: grey;
+
 `
 
 class City extends Component {
@@ -54,21 +76,30 @@ class City extends Component {
 
     render() {
         return (
-            <div>
-                {this.state.showNewForm ?  <NewPostForm createNewPost={this.createNewPost}/>: <button onClick={this.toggleForm}>Don't see your post???</button>}
-                {this.state.showNewForm ? <button onClick={this.toggleForm}>Close the form</button> : ''}
+            <PageWrapper>
+                <Wrapper>
+                    <div>
+                <h2>{this.state.city.name}, {this.state.city.location}</h2>
+                </div>
+               
+                <div>
+                {this.state.showNewForm ?  <NewPostForm createNewPost={this.createNewPost}/>: <ToggleButton onClick={this.toggleForm}>Don't see your post???</ToggleButton>}
+                </div>
+                <div>
+                {this.state.showNewForm ? <ToggleButton onClick={this.toggleForm}>Close the form</ToggleButton> : ''}
+                </div>
+                </Wrapper>
                 <Picture>
-                <h1>{this.state.city.name}</h1>
-                <h3>In the Baller state of {this.state.city.location}</h3>
-                <img src={this.state.city.picture} alt="" />
+                <img className="cityPicture" src={this.state.city.picture} alt="" />
+                </Picture>
                 <PostList
                     cityId={this.props.match.params.cityId}
                     posts={this.state.posts}
                     deletePost={this.deletePost}
                 />
                 
-                </Picture>
-            </div>
+                
+            </PageWrapper>
         );
     }
 }
