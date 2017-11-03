@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 
 // t
 // this.props.match.params.postId
@@ -53,6 +54,9 @@ class Post extends Component {
                         <input type="submit"/><br/><br/>
                         </form>
                         <span><em>Created: {this.state.post.created_at} - Updated: {this.state.post.updated_at}</em></span>
+                        <div>
+                        <Link to ={`/cities/${this.props.match.params.cityId}`}> Back to the City!</Link>
+                        </div>
                     </div>
                     <br/>
                 </div>
@@ -66,8 +70,12 @@ class Post extends Component {
                         <p className="lead">{this.state.post.content}</p>
                         <br/><input type="button" value="Edit Post" onClick={()=>{this.setState({editMode : true})}}/><br/><br/>
                         <span><em>Created: {this.state.post.created_at} - Updated: {this.state.post.updated_at}</em></span>
+                        <div>
+                        <Link to ={`/cities/${this.props.match.params.cityId}`}>Back to the City</Link>
+                        </div>
                     </div>
                     <br/>
+                   
                 </div>
             );
         }

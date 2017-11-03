@@ -20,7 +20,6 @@ const PostList = (props) => {
                 return(
                     <div>
                         <Link to={`/cities/${props.cityId}/posts/${post.id}`}>{post.title}</Link>
-                        <button>Edit</button>
                         <ConfirmLink action={askToDelete} actionArgs={{a:cityId, b:postId}}>
                         <button>Delete</button>
                         </ConfirmLink>
